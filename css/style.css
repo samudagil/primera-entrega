@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*header*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 2rem 0rem 2rem;
+    position: sticky;
+    top: 0%;
+}
+.barra{
+    padding: 5px;
+}
+.barra ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    column-gap: 15px;
+    text-decoration: none;
+}
