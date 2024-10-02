@@ -9,15 +9,15 @@ let xiaomi = 145;
 let tesla = 299;
 
 if(tv.toLocaleLowerCase() === "lg"){
-    alert("el monto de su producto es " + lg + "$")
+    console.log("el monto de su producto es " + lg + "$");
 }else if(tv.toLocaleLowerCase() === "samsung"){
-    alert("el monto de su producto es " + samsung + "$")
+    console.log("el monto de su producto es " + samsung + "$");
 }else if(tv.toLocaleLowerCase() === "xiaomi"){
-    alert("el monto de su producto es " + xiaomi + "$")
+    console.log("el monto de su producto es " + xiaomi + "$");
 }else if(tv.toLocaleLowerCase() === "tesla"){
-    alert("el monto de su producto es " + tesla + "$")
+    console.log("el monto de su producto es " + tesla + "$");
 }else{
-    alert("el producto que ingreso no es correcto");
+    console.log("el producto que ingreso no es correcto");
 }
 
 let montoProducto = parseInt(prompt("ingrese monto del producto"));
