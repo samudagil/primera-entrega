@@ -1,32 +1,34 @@
-let tv = prompt("ingrese modelo de televisor (LG, SAMSUNG, XIAOMI, TESLA)");
+let tvLg = 313;
 
-let lg = 313;
+let tvSamsung = 369;
 
-let samsung = 369;
+let tvXiaomi = 145;
 
-let xiaomi = 145;
+let tvTesla = 299;
 
-let tesla = 299;
-
-if(tv.toLocaleLowerCase() === "lg"){
-    console.log("el monto de su producto es " + lg + "$");
-}else if(tv.toLocaleLowerCase() === "samsung"){
-    console.log("el monto de su producto es " + samsung + "$");
-}else if(tv.toLocaleLowerCase() === "xiaomi"){
-    console.log("el monto de su producto es " + xiaomi + "$");
-}else if(tv.toLocaleLowerCase() === "tesla"){
-    console.log("el monto de su producto es " + tesla + "$");
-}else{
-    console.log("el producto que ingreso no es correcto");
+function producto (tv){
+    if(tv.toLocaleLowerCase() === "lg"){
+        console.log("el monto de su producto es " + tvLg + "$");
+    }else if(tv.toLocaleLowerCase() === "samsung"){
+        console.log("el monto de su producto es " + tvSamsung + "$");
+    }else if(tv.toLocaleLowerCase() === "xiaomi"){
+        console.log("el monto de su producto es " + tvXiaomi + "$");
+    }else if(tv.toLocaleLowerCase() === "tesla"){
+        console.log("el monto de su producto es " + tvTesla + "$");
+    }else{
+        console.log("el producto que ingreso no es correcto");
+    }
 }
 
-let montoProducto = parseInt(prompt("ingrese monto del producto"));
+producto(prompt("ingrese marca de tlevision(LG, SAMSUNG, XIAOMI, TESLA)"));
 
-let cuotas = parseInt(prompt("ingrese en cuantas cuotas desea pagar"));
-
-let i = 1;
+function pagoCuotas(montoProducto, cuotas){
+    let i = 1;
     while(i <= cuotas){
         let divisionMontoFinal = montoProducto / cuotas;
         console.log("el monto a pagar es de " + divisionMontoFinal.toFixed(2) + "$ en " + cuotas + " meses")
         break;
     }
+}
+
+pagoCuotas(parseInt(prompt("ingrese monto del producto")),parseInt(prompt("ingrese en cuantas cuotas desea pagar")));
